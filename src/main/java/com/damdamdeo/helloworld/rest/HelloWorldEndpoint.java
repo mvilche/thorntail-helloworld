@@ -12,7 +12,7 @@ public class HelloWorldEndpoint {
 	@GET
 	@Produces("text/plain")
 	public Response doGet() {
-		return Response.ok("ES UN DEMO! VERSION 2").build();
+		return Response.ok("#################################################################MI APLICACION DEMO#######################################################################").build();
 	}
 }
 
