@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<profiles>
+  <profile>
+    <activation>
+    <activeByDefault>true</activeByDefault>
+  </activation>
+    <id>calidad</id>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.owasp</groupId>
+          <artifactId>dependency-check-maven</artifactId>
+          <version>5.3.0</version>
+	  <executions>
+	     <execution>
+	     <phase>compile</phase>
+              <goals>
+                <goal>verify</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <failBuildOnCVSS>7</failBuildOnCVSS>
+            </configuration>
+        </plugin>
+      </plugins>
+    </build>
+  </profile>
+</profiles>
+</settings>
